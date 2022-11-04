@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+    <style>
+        #respuestaText{
+            color: blue;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function escucha(){
+            var boton=document.getElementById("BotonC1");
+            boton.addEventListener("click",CalculaT,false);
+            var boton2=document.getElementById("BotonC2");
+            boton2.addEventListener("click",CalculaT2,false);
+            var boton3=document.getElementById("BotonC3");
+            boton3.addEventListener("click",incisoD,false);
+        }
+
+        function CalculaT(){
+            var num1=document.getElementById("entradaA");
+            var respuesta=document.getElementById("respuestaText");
+            var num2=document.getElementById("entradaB");
+            num1=parseFloat(num1.value);
+            num2=parseFloat(num2.value);
+            
+
+            if(isNaN(num1)==false && isNaN(num2)==false){
+
+                if(num1==0 && num2==0 || num2==0){
+                    alert("Indefinido");
+                }else{
+                    function incisoa(n1,n2){
+                        return n2/n1;
+                    }
+
+                    function incisob(n1,n2){
+                         return n1%n2;
+                    }
+            
+                    respuesta.innerHTML="a) "+incisoa(num1,num2)+"<br>b) "+incisob(num1,num2);
+                }
+              
+            }else{
+                alert("Rellena correctamente los datos.");
+            }
+            
+        }
+
+        function CalculaT2(){
+            var numero=document.getElementById("entradaC");
+            var verificar=parseInt(numero.value);
+            if(verificar<0 || verificar>99999){
+                alert("El numero no puede exceder de 99999 ni ser menor que 0.")
+                numero.value="";
+            }else{
+                numeroR=String(numero.value);
+                var carac=[];
+                var fin="";
+                for(let i=0; i<numeroR.length; i++){
+                    carac[i]=numeroR.charAt(i);
+                    fin+=" "+carac[i];
+                 }
+
+                document.getElementById("respuestaText").innerHTML="c) "+fin;
+            }
+
+        }
+
+        function incisoD(){
+            var numero=window.prompt("Ingresa un numero");
+            console.log(numero.charAt(0));
+            var carac=[];
+            var fin="";
+            for(let i=0;i<numero.length;i++){
+                carac[i]=numero.charAt(i);
+                fin+=" "+carac[i];
+            }
+            document.getElementById("respuestaText").innerHTML="c)"+fin;
+        }
+
+        window.addEventListener("load",escucha,false);
+
+    </script>
+</head>
+<body>
+    <h2>Ejercicio 16. u9</h2>
+    <h4>
+        Escriba segmentos de programa que realicen cada una de las siguientes tareas: <br> a) Calcule la parte entera del cociente cuando el entero a se divide entre el entero b. <br> b) Calcule el residuo entero cuando el entero a se divide entre el entero b. <br>c) Use las piezas de programa que se desarrollaron en las partes (a) y (b) para escribir una función llamada mostrar- Digitos que reciba un entero entre 1 y 99999, para luego imprimirlo como una serie de dígitos, de los cuales cada par se separa mediante dos espacios. Por ejemplo, el entero 4562 debería imprimirse como 4 5 6 2 <br>d) Incorpore la función desarrollada en la parte (c) en una secuencia de comandos que reciba un entero de un diá-logo prompt e invoque mostrarDigitos para pasar a la función el entero introducido.
+    </h4>
+    <form action="#">
+        <p>
+            <label>Numero A: </label>
+            <input id="entradaA" type="number" min="1" max="99999" placeholder="Numero A">
+            <label>&nbsp;&nbsp; Inciso C:</label> 
+            <input id="entradaC" type="number" min="1" max="99999" placeholder="Numero">
+            <input id="BotonC2" type="button" value="Iniciar">
+        </p>
+        <p>
+            <label>Numero B:</label>
+            <input id="entradaB" type="number" min="1" max="99999" placeholder="Numero B">
+            <label>&nbsp;&nbsp; Inciso D: </label>
+            <input id="BotonC3" type="button" value="Iniciar">
+        </p>
+            <input id="BotonC1" type="button" value="Calcular">
+    </form>
+    <p id="respuestaText">
+
+    </p>
+</body>
+</html>

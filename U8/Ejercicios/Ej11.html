@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+    <script>
+        var producto=["producto1","Producto2","Producto3","Producto4","Producto5"];
+        var precio=[2.98,4.50,9.98,4.49,6.87];
+        var prodEntrada,Cantidad,totalC,totalT=0;
+
+        do{
+
+            prodEntrada=window.prompt("Ingresa el numero del producto: \nIngresa 0 para salir.");
+
+            prodEntrada=parseInt(prodEntrada);
+
+            switch(prodEntrada){
+                case 1: Cantidad=window.prompt("Ingresa la cantidad vendida");
+                        Cantidad=parseInt(Cantidad,10);
+                        totalC=precio[0]*Cantidad;
+                        break;
+                
+                case 2: Cantidad=window.prompt("Ingresa la cantidad vendida");
+                        Cantidad=parseInt(Cantidad,10);
+                        totalC=precio[1]*Cantidad;
+                        break;
+                
+                case 3: Cantidad=window.prompt("Ingresa la cantidad vendida");
+                        Cantidad=parseInt(Cantidad,10);
+                        totalC=precio[2]*Cantidad;
+                        break;
+
+                case 4: Cantidad=window.prompt("Ingresa la cantidad vendida");
+                        Cantidad=parseInt(Cantidad,10);
+                        totalC=precio[3]*Cantidad;
+                        break;
+                
+                case 5: Cantidad=window.prompt("Ingresa la cantidad vendida");
+                        Cantidad=parseInt(Cantidad,10);
+                        totalC=precio[4]*Cantidad;
+                        break;
+
+            }
+
+            totalT+=totalC;
+
+            if(prodEntrada>5 || prodEntrada<0){
+                window.alert("No existe ese producto");
+            }
+
+        }while(prodEntrada!=0);
+
+        document.write("<h2>Venta de productos.</h2> <p>Producto || Precio <br>");
+
+        for(let i=0; i<5; i++){
+            document.writeln(producto[i]+" || "+precio[i]+"<br>");
+        }
+
+        document.write("<br>Total: "+totalT.toFixed(2)+"</p>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

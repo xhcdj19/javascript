@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.6</title>
+    <script>
+        var cantidad,numeros=[],menor=0;
+
+        cantidad=window.prompt("Cuantos numeros desea ingresar");
+        cantidad=parseInt(cantidad);
+
+        for(let i=0; i<cantidad; i++){
+
+            numeros[i]=window.prompt(i+1+".- Ingresa un numero entero positivo.");
+            numeros[i]=parseInt(numeros[i]);
+            
+            while(numeros[i]<0 || isNaN(numeros[i])){45
+                window.alert("Solo ingresa numeros enteros positivos");
+                numeros[i]=window.prompt(i+1+".- Ingresa un numero entero positivo.");
+                numeros[i]=parseInt(numeros[i]);
+            }
+            
+            if(menor>numeros[i] || i==0){
+                menor=numeros[i];
+            }
+        }
+
+        document.write("<h2>El numero menor de la secuencia: "+numeros+" <br>Es: "+menor+"</h2>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

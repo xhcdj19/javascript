@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de operadores relacionales</title>
+    <script>
+        var nombre; 
+        var ahora=new Date();
+        var hora=ahora.getHours();
+
+        nombre=window.prompt("Escriba su nombre");
+
+        if(hora<12){
+            document.write("<h1>Buenos Dias, ");
+            }
+
+        if(hora>=12){
+                hora=hora-12;
+            if(hora<6){
+                document.write("<h1>Buenas Tardes, ");
+                }
+            if(hora>=6){
+                document.write("<h1>Buenas Noches ");
+                }
+            hora+=12;
+        }  
+        console.log(hora);
+        document.writeln(nombre+", bienvenido a la programaci&oacute;n en JavaScript "+"son las "+hora+" horas</h1>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

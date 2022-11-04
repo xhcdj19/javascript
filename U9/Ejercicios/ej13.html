@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+    <style>
+        #textRes{
+            color: blue;
+            font-size:25pt;
+            font-weight:bold;
+        }
+    </style>
+    <script>
+
+        function escucha(){
+            var boton=document.getElementById("botonC");
+            boton.addEventListener("click",Potencia_Entera,false);
+        }
+
+        function Potencia_Entera(){
+            var num=document.getElementById("Base");
+            num=parseInt(num.value);
+            var expo=document.getElementById("Exp");
+            expo=parseInt(expo.value);
+
+            var resultado=Math.pow(num,expo);
+            var rText=document.getElementById("textRes");
+            rText.innerHTML=num+"^"+expo+" = "+resultado;
+        }
+
+        window.addEventListener("load",escucha,false);
+    </script>
+</head>
+<body>
+    <h3>Ejercicio 13 Base_Exponente</h3>
+    <form action="#">
+        <p>
+            <label>Base: </label>
+            <input id="Base" type="number" placeholder="Numero">
+        </p>
+        <p>
+            <label>Exponente: </label>
+            <input id="Exp" type="number" placeholder="^x">
+        </p>
+        <input id="botonC" type="button" value="Calcular">
+    </form>
+    <p id="textRes">
+
+    </p>
+</body>
+</html>

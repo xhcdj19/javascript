@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.4</title>
+    <style>
+        .resp{
+            color:blue;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h3>Encuentre el error en cada uno de los siguientes segmentos de código. [Nota: puede haber más de un error].</h3>
+    <p>
+        a) For ( x = 100, x >= 1, ++x ) document.writeln( x ); <br> b) El siguiente código debe imprimirse sin importar si el valor entero es par o impar: switch ( valor % 2 ) { case 0: document.writeln( "Entero par" ); case 1: document.writeln( "Entero impar" ); }  <br> c) El siguiente código debe imprimir los enteros impares del 19 al 1: for ( x = 19; x >= 1; x += 2 ) document.writeln( x );  <br> d) El siguiente código debe imprimir los enteros pares del 2 al 100: contador = 2; do { document.writeln( contador ); contador += 2; } While ( contador < 100 );
+    </p>
+    <p class="resp">
+        a) no se inicializó con "{" despues del "()" y For es con minuscula "for". <br>
+        b) el codigo para imprimir algo no es el optimo y a los case les falta el "break" y el opcional "default". <br>
+        c) la variable x va en incremento, deberia ir en decremento. y está imprimiendo todos los numeros sin excepcion, cuando deberian ser solo los impares.<br>
+        d) el contador no llega a la meta (100) deberia ser while(contador<=100);
+    </p>
+</body>
+</html>

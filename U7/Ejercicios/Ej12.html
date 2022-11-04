@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var Cuenta, saldoI, Tot_art, Creditos, LimSaldo=5000, NSaldo=0;
+
+        Cuenta=window.prompt("Ingrese su numero de cuenta");
+        saldoI=window.prompt("Ingrese su saldo inicial");
+        Tot_art=window.prompt("Ingrese el total del cargo de articulos en el mes");
+        Creditos=window.prompt("Ingrese el total de creditos en el mes");
+
+        saldoI=parseInt(saldoI); Tot_art=parseInt(Tot_art); Creditos=parseInt(Creditos);
+
+        NSaldo=saldoI+Tot_art-Creditos;
+
+        if(NSaldo>LimSaldo){
+            document.write("<h3>Atención!! Se excedio el límite de su credito</h3>");
+        }
+
+        NSaldo=LimSaldo-NSaldo;
+
+        document.write("<h3>No. Cuenta: "+Cuenta+"<br>Saldo Inicial: "+saldoI+"<br>Limite Permitido: "+LimSaldo+"<br> <br>Nuevo Saldo: "+NSaldo+" </h3>");
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

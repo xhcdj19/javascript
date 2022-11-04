@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 23</title>
+    <script>
+        var cd1,cd2,cd3,cd4,aux;
+
+        cd1=window.prompt("Ingrese el o los 2 primeros digitos del codigo encriptado");
+
+        while(cd1.length>2){
+            window.alert("El codigo es incorrecto");
+            cd1=window.prompt("Ingrese el o los 2 primeros digitos del codigo encriptado");
+        }
+
+        cd2=window.prompt("Ingrese el o los 2 siguientes digitos del codigo encriptado");
+
+        while(cd2.length>2){
+            window.alert("El codigo es incorrecto");
+            cd2=window.prompt("Ingrese el o los 2 siguientes digitos del codigo encriptado");
+        }
+
+        cd3=window.prompt("Ingrese el o los siguientes digitos del codigo encriptado");
+
+        while(cd3.length>2){
+            window.alert("El codigo es incorrecto");
+            cd3=window.prompt("Ingrese el o los siguientes digitos del codigo encriptado");
+        }
+        
+        cd4=window.prompt("Ingrese el o los ultimos 2 digitos del codigo encriptado");
+
+        while(cd4.length>2){
+            window.alert("El codigo es incorrecto");
+            cd4=window.prompt("Ingrese el o los ultimos 2 digitos del codigo encriptado");
+        }
+
+        cd1=parseInt(cd1); cd2=parseInt(cd2); cd3=parseInt(cd3); cd4=parseInt(cd4);
+
+        cd1-=7;cd2-=7;cd3-=7;cd4-=7;
+
+        console.log(cd1+""+cd2+""+cd3+""+cd4);
+
+        aux=cd3;
+        cd3=cd1;
+        cd1=aux;
+
+        document.write("<h2>El codigo descencriptado es: "+cd1+","+cd2+","+cd3+","+cd4);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

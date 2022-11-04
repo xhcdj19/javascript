@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+
+    <style>
+        table{
+            text-align: center;
+            margin: 1%;
+            
+        }
+    </style>
+
+    <script>
+        var ene=1;
+        var diezN,cienN,milN;
+
+        document.write("<table border=1> <tr><th> N </th> <th>10*N</th> <th>100*N</th><th>1000*N</th></tr>");
+
+        while(ene<7){
+            diezN=ene*10;
+            cienN=ene*100;
+            milN=ene*1000;
+
+            document.writeln("<tr> <td>"+ene+"</td><td>"+diezN+"</td> <td>"+cienN+"</td>"+"<td>"+milN+"</td></tr>");
+            ene++;
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

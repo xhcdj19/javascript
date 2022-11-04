@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+    <script>
+        var empleado, horas, pago, sueldo,hrsExtra,pagoExtra;
+        var ciclo=0;
+        while(ciclo<3){
+
+            empleado=window.prompt("Ingrese codigo o nombre del empleado");
+            pago=window.prompt("Ingrese la cantidad pagada por hora");
+            horas=window.prompt("Ingrese las Horas laboradas del empleado");
+            
+            horas=parseInt(horas);
+            pago=parseFloat(pago);
+            
+            if(horas>40){
+                sueldo=pago*40;
+                hrasExtra=horas-40;
+                pagoExtra=hrasExtra*(1.5*pago);
+                sueldo+=pagoExtra;
+            }else{
+                sueldo=horas*pago;
+            }
+            
+            document.write("<h3>Empleado: "+empleado+"  ||  Sueldo: "+sueldo+"</h3>");
+            ciclo++;
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

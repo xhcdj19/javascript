@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+
+    <style>
+        table{
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        var em1,em2,em3,em4;
+        var venta1,venta2,venta3,venta4;
+        var sueldo1,sueldo2,sueldo3, sueldo4;
+
+        em1=window.prompt("Ingresa el codigo de empleado");
+        venta1=window.prompt("Ingresa el total de venta bruta semanal");
+        em2=window.prompt("Ingresa el codigo de empleado");
+        venta2=window.prompt("Ingresa el total de venta bruta semanal");
+        em3=window.prompt("Ingresa el codigo de empleado");
+        venta3=window.prompt("Ingresa el total de venta bruta semanal");
+        em4=window.prompt("Ingresa el codigo de empleado");
+        venta4=window.prompt("Ingresa el total de venta bruta semanal");
+
+        venta1=parseFloat(venta1);
+        venta2=parseFloat(venta2);
+        venta3=parseFloat(venta3);
+        venta4=parseFloat(venta4);
+
+        sueldo1=200+(venta1*0.09);
+        sueldo2=200+(venta2*0.09);
+        sueldo3=200+(venta3*0.09);
+        sueldo4=200+(venta4*0.09);
+
+        document.write("<table border=1> <tr> <th>Empleado</th> <th>Suedo</th> </tr> <tr> <td>"+em1+"</td> <td>"+sueldo1+"</td> </tr> <tr> <td>"+em2+"</td> <td>"+sueldo2+"</td> </tr> <tr> <td>"+em3+"</td> <td>"+sueldo2+"</td> </tr> <tr> <td>"+em4+"</td> <td>"+sueldo4+"</td> </tr> </table>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

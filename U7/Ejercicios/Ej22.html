@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22</title>
+    <script>
+        var codigo,subCod,aux;
+        codigo=window.prompt("Ingresa su entero de 4 digitos");
+
+        while(codigo.length<4 || codigo.length>5){
+            window.alert("Su codigo debe ser de 4 digitos");
+            codigo=window.prompt("Ingresa su entero de 4 digitos");
+        }
+
+        subCod=codigo.split('');
+
+        for(let i=0; i<4; i++){
+            subCod[i]=parseInt(subCod[i]);
+            subCod[i]+=7;
+        }
+
+        aux=subCod[0];
+        subCod[0]=subCod[2];
+        subCod[2]=aux;
+        
+        console.log("fin: "+subCod);
+
+        document.write("<h2>Su codigo encriptado es: "+subCod+"</h2>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

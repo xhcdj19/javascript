@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+    <style>
+        #textRes{
+            color: blue;
+            font-size:25pt;
+            font-weight:bold;
+        }
+    </style>
+    <script>
+
+        function escucha(){
+            var boton=document.getElementById("botonC");
+            boton.addEventListener("click",Potencia_Entera,false);
+        }
+
+        function Potencia_Entera(){
+            var rText=document.getElementById("textRes");
+            var num=document.getElementById("Base");
+            num=parseFloat(num.value);
+            var expo=document.getElementById("Exp");
+            expo=parseFloat(expo.value);
+
+            var resultado;
+
+            if(num%expo == 0){
+                resultado=true;
+                rText.innerHTML="True";
+            }else{
+                resultado=false;
+                rText.innerHTML="False";
+            }
+            
+        }
+
+        window.addEventListener("load",escucha,false);
+    </script>
+</head>
+<body>
+    <h3>Ejercicio 14 Multiplos</h3>
+    <form action="#">
+        <p>
+            <label>Numero1: </label>
+            <input id="Base" type="number" placeholder="Numero1">
+        </p>
+        <p>
+            <label>Numero2: </label>
+            <input id="Exp" type="number" placeholder="Numero2">
+        </p>
+        <input id="botonC" type="button" value="Calcular">
+    </form>
+    <p id="textRes">
+
+    </p>
+</body>
+</html>

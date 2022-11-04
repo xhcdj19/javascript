@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo del interés compuesto</title>
+    <style type="text/css">
+        table{
+            width: 300px;
+            border-collapse: collapse;
+            background-color:lightblue;
+        }
+
+        table,td,th{
+            border:1px solid black;
+            padding: 4px;
+        }
+
+        th{
+            text-align:left;
+            color: white;
+            background-color:darkblue;
+        }
+
+        tr.filaimpar{
+            background-color: white;
+        }
+    </style>
+
+    <script>
+        var monto,principal=100.00; tasa=0.05;
+
+        while(tasa<=0.10){
+            document.write("<table>");
+            document.writeln("<caption>C&aacute;lculo del interés compuesto | <b>Tasa: "+tasa.toFixed(2)+"</b></caption>");
+            document.writeln("<thead><tr><th>A&ntilde;o</th>");
+            document.writeln("<th>Monto en dep&oacute;sito</th>");
+            document.writeln("</tr></thead><tbody>");
+            for(var anio=1; anio<=10; ++anio){
+                monto=principal*Math.pow(1.0+tasa,anio);
+                if(anio%2!==0){
+                    document.writeln("<tr class=filaimpar'><td>"+anio+"</td><td>"+monto.toFixed(2)+"</td></tr>");
+                }else{
+                    document.writeln( "<tr><td>" + anio + "</td><td>" + monto.toFixed(2) + "</td></tr>" );
+                }
+                
+            }
+            document.writeln("</tbody></table><br>");
+            tasa+=0.01
+        }
+        
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

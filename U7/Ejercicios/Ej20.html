@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej20</title>
+    <script>
+        function texto()
+        {
+            var palabra=prompt("Escribe un numero").toLowerCase();
+         
+            // eliminamos los espacios en blanco
+            palabra=palabra.replace(/ /g, "");
+
+            while(palabra.length<5){
+                window.alert("Ingrese numero con 5 o mas digitos");
+                var palabra=prompt("Escribe un numero").toLowerCase();
+                palabra=palabra.replace(/ /g, "");
+            }
+         
+            for (var i=0;i<palabra.length;i++){
+                if(palabra[i]!=palabra[palabra.length-i-1]){
+                    return false;
+                }
+            }
+            return true;
+        }
+         
+        if(texto())
+        {
+            alert("Si es un palíndromo");
+        }else{
+            alert("No es un palíndromo")
+        }
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

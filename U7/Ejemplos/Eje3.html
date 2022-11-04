@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis de los resultados de un examen</title>
+    <script>
+        var aprobados=0;
+        var reprobados=0;var estudiante=1;
+        var resultados;
+
+        while(estudiante<=10){
+            resultado=window.prompt("Escriba el resultado (1=aprobado,2=reprobado)");
+            if(resultado=="1"){
+                aprobados=aprobados+1;
+            }else{
+                reprobados+=1;
+            }
+            estudiante+=1;
+        }
+
+        document.writeln("<h1>Resultados del examen</h1>");
+        document.writeln("<p>Aprobados: "+aprobados+": Reprobados: "+reprobados+"</p>");
+
+        if(aprobados>8){
+            document.writeln("<p>Bono para el instructor</p>");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

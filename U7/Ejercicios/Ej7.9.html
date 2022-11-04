@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #respuesta{
+            color: blue;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 7.9</h1>
+    <h3>Identifique y corrija los errores en cada uno de los siguientes segmentos de código. [Nota: puede haber más de un error en cada fragmento; a menos que haya declaraciones presentes, suponga que todas las variables están declaradas e inicializadas correctamente].</h3>
+    <p>
+        a) if ( edad >= 65 ); document.writeln( "Edad es mayor o igual que 65" ); else document.writeln( "Edad es menor que 65 )"; <br> b) var x = 1, total; while ( x <= 10 ) { total += x; ++x; } <br> c) var x = 1; var total = 0; while ( x <= 100 ) total += x; ++x; <br> d) var y = 5; while ( y > 0 ) { document.writeln( y ); ++y;
+    </p>
+
+    <br>
+
+    <p id=respuesta>
+        a) if(edad>=65){ || no ";" <br>
+        b) total=0; || se asigna un valor numerico para poder ir sumando en el condicional. <br>
+        c) while(x<=100){total+=x; ++x;} || deben abrirse y cerrarse llaves. <br>
+        d) document.writeln("&lt;p&gt;"+y+"&lt;/p&gt;"); & --y;  || Para mostrar en el navegador debemos implementar codigo HTML en el writeln y hacer que la variable y decremente o sera un ciclo infinito.
+
+    </p>
+
+</body>
+</html>

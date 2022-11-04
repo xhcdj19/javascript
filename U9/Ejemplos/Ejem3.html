@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desplazar y escalar enteros aleatorios</title>
+    <style type="text/css">
+        p,ol{margin:0;}
+        li{display: inline; margin-right: 10px;}
+    </style>
+    <script>
+        var valor; 
+        document.writeln("<p>Numeros Aleatorios</p><ol>");
+        
+        for(var i=1; i<=30; ++i){
+            valor=Math.floor(1+Math.random()*6);
+            document.writeln("<li>"+valor+"</li><br>");
+        }
+
+        document.writeln("</ol>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
